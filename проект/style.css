@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+.navs{
+  height: 100%;
+}
+
 body{
   margin: 0px;
 }
@@ -57,7 +61,12 @@ header{
 
 .conteiner{
   display: flex;
-  min-height: 1000px;
+  min-height: 300px;
+}
+
+h4{
+  width: 100%;
+  text-align: center;
 }
 
 .gradient{
@@ -222,4 +231,10 @@ a{
   box-shadow: 0 15px 20px #1560BD;
   color: white;
   transform: translateY(-7px);
+}
+
+@media (max-height: 1200px){
+  .up{
+    display: none;
+  }
 }
