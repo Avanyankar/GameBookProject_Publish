@@ -33,7 +33,7 @@
     <div class="gradient"></div>
     <main>
       <aside>
-        <h2 class="animate__animated animate__bounceInRight" id="EpicGames">Epic Games</h2>
+        <h2 class="wow animate__animated animate__bounceInRight" id="EpicGames">Epic Games</h2>
         <div class="game_container">
           <div class="block">
             <figure class="snip1573">
@@ -41,6 +41,7 @@
               <figcaption>
                 <h3>Watch Dogs Legion</h3>
               </figcaption>
+              <a href="./games/WDL.html"></a>
             </figure>
             <h3 class="animate__animated animate__bounceInLeft">Watch Dogs Legion</h3>
           </div>
@@ -51,6 +52,7 @@
               <figcaption>
                 <h3>Hitman 3</h3>
               </figcaption>
+              <a href="./games/Hitman 3.html"></a>
             </figure>
             <h3 class="animate__animated animate__bounceInLeft">Hitman 3</h3>
           </div>
@@ -61,6 +63,7 @@
               <figcaption>
                 <h3>Detroit: Become Human</h3>
               </figcaption>
+              <a href="./games/Detroit Become Human.html"></a>
             </figure>
             <h3 class="animate__animated animate__bounceInLeft">Detroit: Become Human</h3>
           </div>
@@ -106,6 +109,7 @@
               <figcaption>
                 <h3>WOW</h3>
               </figcaption>
+              <a href="./games/WOW.html"></a>
             </figure>
             <h3 class="animate__animated animate__bounceInLeft">World of Warcraft (WOW)</h3> <!-- Я бы поиграл но подписку брать не хочу(-->
           </div>
@@ -192,7 +196,7 @@
                 <h3>Among Us</h3>
               </figcaption>
             </figure>
-            <h3 class="animate__animated animate__bounceInLeft">Among Us</h3> <!-- AMOGUS SUS -->
+            <h3 class="wow animate__animated animate__bounceInLeft">Among Us</h3> <!-- AMOGUS SUS -->
           </div>
         </div>
       </aside>
@@ -204,7 +208,25 @@
     Как с нами связаться? Есть множество способов: 1) Наша почта game_book@bk.ru (убедительная просьба не спамить); 2) наш аккаунт в тик токе gamebookproject;<br>
   </footer>
 </body>
+<script src="/wow.js"></script>
 <script>
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
+
   $(".hover").mouseleave(
     function () {
       $(this).removeClass("hover");

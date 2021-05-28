@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>Structure</title>
+  <link rel="shortcut icon" href="/img/logo.png">
+  <script src="https://yastatic.net/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <header id="up">
+    <a href="/index.html"><img class="logo" src="/img/logo.png" alt="лого сайта"></a>
+    <div class="navs">
+      <nav>
+        <a href="/History.html"><button class="floating-button">О нас</button></a>
+        <a href="/marks.html"><button class="floating-button">Отзывы</button></a>
+        <a href="#down"><button class="floating-button">Контакты</button></a>
+      </nav>
+
+      <nav>
+        <a href="#"><button class="floating-button"> </button></a>
+        <a href="#"><button class="floating-button"> </button></a>
+        <a href="#"><button class="floating-button"> </button></a>
+      </nav>
+    </div>
+  </header>
+
+  <a href="#up"><button class="up floating-button">Наверх</button></a>
+
+  <div class="conteiner">
+    <div class="gradient"></div>
+    <main>
+
+    </main>
+    <div class="gradient"></div>
+  </div>
+    
+  <footer id="down">
+    Как с нами связаться? Есть множество способов: 1) Наша почта game_book@bk.ru (убедительная просьба не спамить); 2) наш аккаунт в тик токе gamebookproject;<br>
+  </footer>
+</body>
+<script>
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+
+  $(document).ready(function(){
+    $('[href^="#"]').on('click', function(event){
+      if ($(this).attr('hash') !== "") {
+        event.preventDefault();
+        let hash = $(this).prop('hash');
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+        });
+      }
+    });
+  });
+</script>
+</html>

@@ -8,6 +8,10 @@ body{
   margin: 0px;
 }
 
+p{
+  text-indent: 40px;
+}
+
 .logo{
   background-size: cover;
   width: 150px;
@@ -59,6 +63,10 @@ header{
   z-index: 2;
 }
 
+.pashalka{
+  padding: 20px;
+}
+
 .conteiner{
   display: flex;
   min-height: 300px;
@@ -67,6 +75,7 @@ header{
 h4{
   width: 100%;
   text-align: center;
+  font-size: 25px;
 }
 
 .gradient{
@@ -205,6 +214,7 @@ img{
 
 a{
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .floating-button {
@@ -233,7 +243,7 @@ a{
   transform: translateY(-7px);
 }
 
-@media (max-height: 1200px){
+@media (max-height: 600px){
   .up{
     display: none;
   }
