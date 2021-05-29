@@ -32,7 +32,13 @@
   <div class="conteiner">
     <div class="gradient"></div>
     <main>
-
+      <h4 class="wow animate__animated animate__bounceInLeft"> </h4>
+      <aside>
+        <h5 class="wow animate__animated animate__bounceInLeft" id=""> </h5>
+        <p class="wow animate__animated animate__bounceInRight">
+          
+        </p>
+      </aside>
     </main>
     <div class="gradient"></div>
   </div>
@@ -41,6 +47,7 @@
     Как с нами связаться? Есть множество способов: 1) Наша почта game_book@bk.ru (убедительная просьба не спамить); 2) наш аккаунт в тик токе gamebookproject;<br>
   </footer>
 </body>
+<script src="/wow.js"></script>
 <script>
   $(".hover").mouseleave(
     function () {
@@ -60,5 +67,22 @@
       }
     });
   });
+
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
 </script>
 </html>

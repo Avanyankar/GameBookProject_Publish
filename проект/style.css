@@ -16,6 +16,7 @@ p{
   background-size: cover;
   width: 150px;
   height: 150px !important;
+  border-radius: 50%;
 }
 
 .game_container{
@@ -25,8 +26,11 @@ p{
   padding: 5px;
 }
 
+h5{
+  font-size: 18px;
+}
+
 aside{
-  border-bottom: 3px dotted;
   border-top: dotted 3px;
 }
 
@@ -227,7 +231,7 @@ a{
   color: #524f4e;
   text-decoration: none;
   display: inline-block;
-  width: 140px;
+  min-width: 140px;
   height: 45px;
   line-height: 45px;
   border-radius: 45px;
@@ -236,6 +240,7 @@ a{
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
 }
+
 .floating-button:hover {
   background:#4560BD;
   box-shadow: 0 15px 20px #1560BD;

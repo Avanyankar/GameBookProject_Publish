@@ -23,18 +23,18 @@
   <div class="conteiner">
     <div class="gradient"></div>
     <main>
-      <h4 class="animate__animated animate__bounceInRight">О нашем сайте</h4>
-      <p class="animate__animated animate__bounceInLeft">
+      <h4 class="wow animate__animated animate__bounceInRight">О нашем сайте</h4>
+      <p class="wow animate__animated animate__bounceInLeft">
         На нашем сайте вы можете узнать много интересного про ваши любимые игры: история создания, создатели, часть лора и многое другое! Сайт написан на js, css и html. В дальнейшем наш сайт будет дорабатываться. Если у вас есть предложения, то напишите нам (контакты можно найти через меню сайта).
       </p>
 
-      <h4 class="animate__animated animate__bounceInRight">Что мы хотим добавить:</h4>
-      <p class="animate__animated animate__bounceInLeft">
+      <h4 class="wow animate__animated animate__bounceInRight">Что мы хотим добавить:</h4>
+      <p class="wow animate__animated animate__bounceInLeft">
         Чтобы комментарий можно было оставить прямо на сайте; Сделать, чтобы вам было легче связаться с нами; 
       </p>
 
-      <h4 class="animate__animated animate__bounceInRight">Интресные факты о сайте:</h4>
-      <p class="animate__animated animate__bounceInLeft">
+      <h4 class="wow animate__animated animate__bounceInRight">Интресные факты о сайте:</h4>
+      <p class="wow animate__animated animate__bounceInLeft">
         На сайте есть пасхалка; 
       </p>
     </main>
@@ -45,6 +45,7 @@
     Как с нами связаться? Есть множество способов: 1) Наша почта game_book@bk.ru (убедительная просьба не спамить); 2) наш аккаунт в тик токе gamebookproject;<br>
   </footer>
 </body>
+<script src="/wow.js"></script>
 <script>
   $(".hover").mouseleave(
     function () {
@@ -64,5 +65,22 @@
       }
     });
   });
+
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
 </script>
 </html>

@@ -12,11 +12,18 @@
 <body>
   <header id="up">
     <a href="/index.html"><img class="logo" src="/img/logo.png" alt="лого сайта"></a>
-    <nav>
-      <a href="/History.html"><button class="floating-button">О нас</button></a>
-      <a href="/marks.html"><button class="floating-button">Отзывы</button></a>
-      <a href="#down"><button class="floating-button">Контакты</button></a>
-    </nav>
+    <div class="navs">
+      <nav>
+        <a href="./History.html"><button class="floating-button">О нас</button></a>
+        <a href="./marks.html"><button class="floating-button">Отзывы</button></a>
+        <a href="#down"><button class="floating-button">Контакты</button></a>
+      </nav>
+
+      <nav>
+        <a href="#actors"><button class="floating-button">Факты об актёрах</button></a>
+        <a href="#facts"><button class="floating-button">Интересные факты</button></a>
+      </nav>
+    </div>
   </header>
 
   <a href="#up"><button class="up floating-button">Наверх</button></a>
@@ -24,30 +31,32 @@
   <div class="conteiner">
     <div class="gradient"></div>
     <main>
-      <h4 class="animate__animated animate__bounceInLeft">Detroit Become Human</h4>
-      <p class="animate__animated animate__bounceInRight">
-        Амелия Роуз Блэр (The Tracis) и Брайан Дехарт (Connor) женятся в реальной жизни.
-      </p>
+      <h4 class="wow animate__animated animate__bounceInLeft">Detroit Become Human</h4>
+      <aside>
+        <h5 class="wow animate__animated animate__bounceInLeft" id="actors">1. Факты об актёрах</h5>
+        <p class="wow animate__animated animate__bounceInRight">
+          Амелия Роуз Блэр (The Tracis) и Брайан Дехарт (Connor) женятся в реальной жизни.
+        </p>
+        <p class="wow animate__animated animate__bounceInRight">
+          Одри Бустани, которая играет Алису, также играет Эмму. (Заложница девушка в начале игры)
+        </p>
+      </aside>
 
-      <p class="animate__animated animate__bounceInRight">
-        Игра основана на 2012 Sony Playstation 3 технологической демо Кара (2012), также произведенной Quantic Dream. В то время она не задумывалась как игра в любой форме или форме, но так как демо привлекло много внимания, студия была вдохновлена дать персонажу перезагрузку в полноценный продукт.
-      </p>
-
-      <p class="animate__animated animate__bounceInRight">
-        Каждый главный герой (Кара, Коннор и Маркус) имеет свой собственный композитор специально для них. Что, как и работа камеры, было способом отличить одного персонажа от другого.
-      </p>
-
-      <p class="animate__animated animate__bounceInRight">
-        Минка Келли, который изображает Север, также был поддерживающим персонажем в сериале Almost Human, который последовал за человеческим детективом в паре с андроид-партнером, похожим на Коннора и Хэнка. В то время как шоу сосредоточилось на более общем научно-фантастическом преступлении, в нем также рассматривались темы андроидов, обладающих человеческими эмоциями и чувствами.
-      </p>
-
-      <p class="animate__animated animate__bounceInRight">
-        Цитата “Око за око, и мир ослепляет” происходит от “Око за око только заканчивается тем, что делает весь мир слепым”, часто приписывается Махатме Ганди.
-      </p>
-
-      <p class="animate__animated animate__bounceInRight">
-        Одри Бустани, которая играет Алису, также играет Эмму. (Заложница девушка в начале игры)
-      </p>
+      <aside>
+        <h5 class="wow animate__animated animate__bounceInLeft" id="facts">2. Интересные факты</h5>
+        <p class="wow animate__animated animate__bounceInRight">
+          Игра основана на 2012 Sony Playstation 3 технологической демо Кара (2012), также произведенной Quantic Dream. В то время она не задумывалась как игра в любой форме, но так как демо привлекло много внимания, студия была вдохновлена дать персонажу перезагрузку в полноценный продукт.
+        </p>
+        <p class="wow animate__animated animate__bounceInRight">
+          Каждый главный герой (Кара, Коннор и Маркус) имеет свой собственный композитор специально для них. Что, как и работа камеры, было способом отличить одного персонажа от другого.
+        </p>
+        <p class="wow animate__animated animate__bounceInRight">
+          Минка Келли, который изображает Север, также был поддерживающим персонажем в сериале Almost Human, который последовал за человеческим детективом в паре с андроид-партнером, похожим на Коннора и Хэнка. В то время как шоу сосредоточилось на более общем научно-фантастическом преступлении, в нем также рассматривались темы андроидов, обладающих человеческими эмоциями и чувствами.
+        </p>
+        <p class="wow animate__animated animate__bounceInRight">
+          Цитата “Око за око, и мир ослепляет” происходит от “Око за око только заканчивается тем, что делает весь мир слепым”, часто приписывается Махатме Ганди.
+        </p>
+      </aside>
     </main>
     <div class="gradient"></div>
   </div>
@@ -56,6 +65,7 @@
     Как с нами связаться? Есть множество способов: 1) Наша почта game_book@bk.ru (убедительная просьба не спамить); 2) наш аккаунт в тик токе gamebookproject;<br>
   </footer>
 </body>
+<script src="/wow.js"></script>
 <script>
   $(".hover").mouseleave(
     function () {
@@ -75,5 +85,22 @@
       }
     });
   });
+
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
 </script>
 </html>

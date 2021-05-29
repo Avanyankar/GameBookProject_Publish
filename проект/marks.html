@@ -23,9 +23,9 @@
   <div class="conteiner">
     <div class="gradient"></div>
     <main>
-      <h4 class="animate__animated animate__bounceInRight">Первый комментарий.</h4>
+      <h4 class="wow animate__animated animate__bounceInRight">Первый комментарий.</h4>
       <img src="./отзывы/Не постановочный отзыв cody.png" alt="комментарий" width="100%" class="animate__animated animate__bounceIn">
-      <p class="animate__animated animate__bounceInLeft">
+      <p class="wow animate__animated animate__bounceInLeft">
         Спасибо за отзыв Cody, нам было очень приятно.
       </p>
     </main>
@@ -36,6 +36,7 @@
     Как с нами связаться? Есть множество способов: 1) Наша почта game_book@bk.ru (убедительная просьба не спамить); 2) наш аккаунт в тик токе gamebookproject;<br>
   </footer>
 </body>
+<script src="/wow.js"></script>
 <script>
   $(".hover").mouseleave(
     function () {
@@ -55,5 +56,22 @@
       }
     });
   });
+
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
 </script>
 </html>
